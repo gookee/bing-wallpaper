@@ -291,7 +291,7 @@ namespace BingWallpaper
                     return stream.ReadToEnd();
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 return String.Empty;
             }

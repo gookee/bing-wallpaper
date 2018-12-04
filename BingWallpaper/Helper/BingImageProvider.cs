@@ -39,7 +39,6 @@ namespace BingWallpaper
         {
             using (var client = new HttpClient())
             {
-
                 using (var jsonStream = await client.GetStreamAsync("https://cn.bing.com/cnhp/coverstory/"))
                 {
                     var ser = new DataContractJsonSerializer(typeof(Coverstory));

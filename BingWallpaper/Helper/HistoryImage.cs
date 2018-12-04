@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
@@ -82,24 +83,24 @@ namespace BingWallpaper
             return date2Image.ContainsKey(date);
         }
 
+        public static HistoryImage First()
+        {
+            return date2Image.OrderBy(c => c.Key).FirstOrDefault().Value;
+        }
+
+        public static HistoryImage Last()
+        {
+            return date2Image.OrderByDescending(c => c.Key).FirstOrDefault().Value;
+        }
+
         public static HistoryImage Next(string date)
         {
-            var key = DateTime.Parse(date).AddDays(1).ToString("yyyy-MM-dd");
-            if (date2Image.ContainsKey(key))
-            {
-                return date2Image[key];
-            }
-            return null;
+            return date2Image.Where(c => DateTime.Parse(c.Key) > DateTime.Parse(date)).OrderBy(c => c.Key).FirstOrDefault().Value;
         }
 
         public static HistoryImage Previous(string date)
         {
-            var key = DateTime.Parse(date).AddDays(-1).ToString("yyyy-MM-dd");
-            if (date2Image.ContainsKey(key))
-            {
-                return date2Image[key];
-            }
-            return null;
+            return date2Image.Where(c => DateTime.Parse(c.Key) < DateTime.Parse(date)).OrderByDescending(c => c.Key).FirstOrDefault().Value;
         }
 
         public static void AddImage(HistoryImage image)

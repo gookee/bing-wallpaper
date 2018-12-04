@@ -26,7 +26,12 @@ namespace BingWallpaper
             this.image = image;
         }
 
-        private async void WallpaperStoryForm_Load(object sender, EventArgs e)
+        private void WallpaperStoryForm_LoadAsync(object sender, EventArgs e)
+        {
+            LoadImageAsync();
+        }
+
+        async void LoadImageAsync()
         {
             if (image != null)
             {
@@ -45,29 +50,58 @@ namespace BingWallpaper
                 {
                     pictureBox1.Image = Properties.Resources.error;
                 }
-              
+
             }
         }
 
         private void btnPre_Click(object sender, EventArgs e)
         {
-            var pre = HistoryImageProvider.Previous(image.Date);
-            if (pre != null)
-            {
-                image = pre;
-                WallpaperStoryForm_Load(sender,e);
-            }
+            JumpPre();
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            var pre = HistoryImageProvider.Next(image.Date);
+            JumpNext();
+        }
+
+        private void WallpaperStoryForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Left)
+            {
+                JumpPre();
+            }
+            else if (e.KeyCode == Keys.Right)
+            {
+                JumpNext();
+            }
+        }
+
+        private void JumpPre()
+        {
+            var pre = HistoryImageProvider.Previous(image.Date);
             if (pre != null)
             {
                 image = pre;
-                WallpaperStoryForm_Load(sender, e);
             }
+            else
+            {
+                image = HistoryImageProvider.Last();
+            }
+            LoadImageAsync();
+        }
 
+        private void JumpNext()
+        {
+            var next = HistoryImageProvider.Next(image.Date);
+            if (next != null)
+            {
+                image = next;
+            }
+            else
+            {
+                image = HistoryImageProvider.First();
+            }
+            LoadImageAsync();
         }
     }
 }

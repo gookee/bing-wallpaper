@@ -120,29 +120,44 @@
   <data name="AppName" xml:space="preserve">
     <value>Bing WallPaper</value>
   </data>
+  <data name="AppStatus" xml:space="preserve">
+    <value>An Instance Of The Application Is Already Running</value>
+  </data>
   <data name="Exit" xml:space="preserve">
     <value>Exit</value>
   </data>
   <data name="ForceUpdate" xml:space="preserve">
     <value>Force Update</value>
   </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Hours</value>
+  </data>
   <data name="IntervalChange" xml:space="preserve">
-    <value>Change in Interval</value>
+    <value>Change In Interval</value>
   </data>
   <data name="LaunchOnStartup" xml:space="preserve">
-    <value>Launch on Startup</value>
+    <value>Launch On Startup</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>Minutes</value>
   </data>
   <data name="Random" xml:space="preserve">
-    <value>Random wallpaper</value>
+    <value>Random Wallpaper</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Save Wallpaper</value>
   </data>
   <data name="SaveDialgName" xml:space="preserve">
-    <value>Save current wallpaper</value>
+    <value>Save Current Wallpaper</value>
+  </data>
+  <data name="UpdateCount" xml:space="preserve">
+    <value>{Count} Historical Data Have Been Updated</value>
   </data>
   <data name="UpdateDB" xml:space="preserve">
     <value>Update Local Wallpaper DB</value>
+  </data>
+  <data name="UpdateOver" xml:space="preserve">
+    <value>Your Local Data Is Up To Date</value>
   </data>
   <data name="WallPaperStory" xml:space="preserve">
     <value>WallPaper Story</value>

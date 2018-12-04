@@ -70,6 +70,15 @@ namespace BingWallpaper {
         }
         
         /// <summary>
+        ///   查找类似 An Instance Of The Application Is Already Running 的本地化字符串。
+        /// </summary>
+        internal static string AppStatus {
+            get {
+                return ResourceManager.GetString("AppStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Exit 的本地化字符串。
         /// </summary>
         internal static string Exit {
@@ -88,7 +97,16 @@ namespace BingWallpaper {
         }
         
         /// <summary>
-        ///   查找类似 Change in Interval 的本地化字符串。
+        ///   查找类似 Hours 的本地化字符串。
+        /// </summary>
+        internal static string Hours {
+            get {
+                return ResourceManager.GetString("Hours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Change In Interval 的本地化字符串。
         /// </summary>
         internal static string IntervalChange {
             get {
@@ -97,7 +115,7 @@ namespace BingWallpaper {
         }
         
         /// <summary>
-        ///   查找类似 Launch on Startup 的本地化字符串。
+        ///   查找类似 Launch On Startup 的本地化字符串。
         /// </summary>
         internal static string LaunchOnStartup {
             get {
@@ -106,7 +124,16 @@ namespace BingWallpaper {
         }
         
         /// <summary>
-        ///   查找类似 Random wallpaper 的本地化字符串。
+        ///   查找类似 Minutes 的本地化字符串。
+        /// </summary>
+        internal static string Minutes {
+            get {
+                return ResourceManager.GetString("Minutes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Random Wallpaper 的本地化字符串。
         /// </summary>
         internal static string Random {
             get {
@@ -124,11 +151,20 @@ namespace BingWallpaper {
         }
         
         /// <summary>
-        ///   查找类似 Save current wallpaper 的本地化字符串。
+        ///   查找类似 Save Current Wallpaper 的本地化字符串。
         /// </summary>
         internal static string SaveDialgName {
             get {
                 return ResourceManager.GetString("SaveDialgName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 {Count} Historical Data Have Been Updated 的本地化字符串。
+        /// </summary>
+        internal static string UpdateCount {
+            get {
+                return ResourceManager.GetString("UpdateCount", resourceCulture);
             }
         }
         
@@ -138,6 +174,15 @@ namespace BingWallpaper {
         internal static string UpdateDB {
             get {
                 return ResourceManager.GetString("UpdateDB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Your Local Data Is Up To Date 的本地化字符串。
+        /// </summary>
+        internal static string UpdateOver {
+            get {
+                return ResourceManager.GetString("UpdateOver", resourceCulture);
             }
         }
         

@@ -120,17 +120,26 @@
   <data name="AppName" xml:space="preserve">
     <value>Bing每日壁纸</value>
   </data>
+  <data name="AppStatus" xml:space="preserve">
+    <value>程序已运行</value>
+  </data>
   <data name="Exit" xml:space="preserve">
     <value>退出</value>
   </data>
   <data name="ForceUpdate" xml:space="preserve">
     <value>强制更新</value>
   </data>
+  <data name="Hours" xml:space="preserve">
+    <value>小时</value>
+  </data>
   <data name="IntervalChange" xml:space="preserve">
     <value>定时切换</value>
   </data>
   <data name="LaunchOnStartup" xml:space="preserve">
     <value>开机启动</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>分钟</value>
   </data>
   <data name="Random" xml:space="preserve">
     <value>随机壁纸</value>
@@ -141,8 +150,14 @@
   <data name="SaveDialgName" xml:space="preserve">
     <value>保存当前壁纸</value>
   </data>
+  <data name="UpdateCount" xml:space="preserve">
+    <value>更新了{Count}条历史数据</value>
+  </data>
   <data name="UpdateDB" xml:space="preserve">
     <value>升级本地壁纸库</value>
+  </data>
+  <data name="UpdateOver" xml:space="preserve">
+    <value>你的本地数据已经是最新</value>
   </data>
   <data name="WallPaperStory" xml:space="preserve">
     <value>壁纸故事</value>

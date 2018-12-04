@@ -109,11 +109,11 @@ namespace BingWallpaper
             [DataMember]
             public bool LaunchOnStartup = true;
             [DataMember]
-            public string ImgCopyright = "Bing Wallpaper";
+            public string ImgCopyright = Resource.AppName;
             [DataMember]
             public string ImgCopyrightLink = "https://www.bing.com";
             [DataMember]
-            public string AutoChangeInterval = "1小时";
+            public string AutoChangeInterval = "1" + Resource.Hours;
         }
     }
 }
